@@ -1,0 +1,26 @@
+Service File Content:
+
+[Unit]
+Description=DCCP Script
+After=network.target
+
+[Service]
+ExecStart=<path to the .sh file>
+Environment="PATH=/<path to the project virtual environment>"
+
+[Install]
+WantedBy=default.target
+
+
+
+
+
+
+
+
+.SH File Content:
+
+#!/bin/bash
+cd /home/murali/Videos/Projects/System-Moniter/sysmon-env/sysmon_service
+python manage.py runserver 5464
+
